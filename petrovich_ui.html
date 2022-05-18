@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Гуру на работе</title>
+</head>
+<body>
+<div class="container">
+    <h2>Индивидуальное автоматизированное рабочее место Петровича</h2>
+    <div class="row alert alert-info">
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <div class="input-group">
+                  <span class="input-group-btn">
+                    <button class="btn btn-warning" type="button" id="start-btn">Вот эту возьму</button>
+                  </span>
+                <input type="text" class="form-control" placeholder="ид сделки" id="id-deal">
+            </div><!-- /input-group -->
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+
+    $('#start-btn').click(function() {
+        // https://restapi.bitrix24.ru/rest/1/n2dmxkhphdvxlmsi/crm.automation.trigger/?target=DEAL_{{ID}}&code=omvtd
+
+        var url = 'https://restapi.bitrix24.ru/rest/1/n2dmxkhphdvxlmsi/crm.automation.trigger/?target=DEAL_' +
+            $( "#id-deal" ).val() + '&code=omvtd';
+
+        console.log(url);
+
+        $.get( url, function( data ) {
+            console.log('Петрович снова смог!', data);
+        });
+    })
+
+</script>
+</body>
+</html>
