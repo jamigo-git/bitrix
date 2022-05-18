@@ -163,7 +163,7 @@ function generateContacts($record_count) {
 function executeHook($params) {
 
 
-    $queryUrl = 'https://restapi.bitrix24.ru/rest/1/l1tz1xrukigrzvyu/batch.json';
+    $queryUrl = 'https://sbercloud.bitrix24.ru/rest/8/pxxbs4ledsk8kwq7/batch.json';
     $queryData = http_build_query($params);
 
     $curl = curl_init();
