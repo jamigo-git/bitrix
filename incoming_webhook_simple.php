@@ -1,6 +1,6 @@
 <?
 
-    $queryUrl = 'https://restapi.bitrix24.ru/rest/1/ng5iy6mlibyijomy/user.current.json';
+    $queryUrl = 'https://sbercloud.bitrix24.ru/rest/8/ny4jojslrgt1pbdx/user.current.json';
     // $queryData = http_build_query(array());
 
     $curl = curl_init();
